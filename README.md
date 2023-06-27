@@ -12,12 +12,12 @@ Robby has five possible actions:  Move-North, Move-South, Move-East, Move-West, 
 Program implements a Q-learning method for Robby, using a Q-matrix, in which the rows correspond to states and the columns correspond to actions. The Q-matrix is initialized to all zeros at the beginning of a run. 
 
 During a run, Robby will learn over a series of N episodes, during each of which he will perform M actions. The initial state of the grid in each episode is a random placement of cans, where each grid square has a probability of 0.5 to contain a can (and 0.5 not to contain a can). Robby is initially placed in a random grid square. At each time step t during an episode, the code will do the following:
-  • Observe Robby’s current state, <sub>st</sub>
-  • Choose an action a<sub>t</sub>, using epsilon-greedy action selection
-  • Perform the action
-  • Receive reward r<sub>t</sub>(which is zero except in the cases specified above)
-  •  Observe Robby’s new state s<sub>t+1</sub>
-  •  Update Q(s<sub>t</sub>, a<sub>t</sub>) +  𝜂(r<sub>t</sub> + 𝛾max<sub>a'</sub>Q(s<sub>t + 1</sub>, a') - Q(s<sub>t</sub>, a<sub>t</sub>))
+  - Observe Robby’s current state, <sub>st</sub><br>
+  - Choose an action a<sub>t</sub>, using epsilon-greedy action selection<br>
+  - Perform the action<br>
+  - Receive reward r<sub>t</sub>(which is zero except in the cases specified above)<br>
+  -  Observe Robby’s new state s<sub>t+1</sub><br>
+  -  Update Q(s<sub>t</sub>, a<sub>t</sub>) +  𝜂(r<sub>t</sub> + 𝛾max<sub>a'</sub>Q(s<sub>t + 1</sub>, a') - Q(s<sub>t</sub>, a<sub>t</sub>))<br>
 
 At the end of each episode, it generate a new distribution of cans and places Robby in a random grid square to start the next episode. The Q-matrix will continue updating over the N episodes, keeping track of the total reward gained per episode. 
 
