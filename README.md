@@ -21,7 +21,7 @@ During a run, Robby will learn over a series of N episodes, during each of which
 
 At the end of each episode, it generate a new distribution of cans and places Robby in a random grid square to start the next episode. The Q-matrix will continue updating over the N episodes, keeping track of the total reward gained per episode. 
 
-The following parameter values used to do a run consisting of N episodes of M steps each
+The following parameter values used to do a run consisting of N episodes of M steps each<br>
   N = 5,000 ; M = 200 ; 𝜂 =  0.2;  𝛾 =  0.9
 
 For choosing actions with epsilon-greedy, epsilon is set to e=0.1 initially, and progressivley decreases every 50 epochs or until it reaches 0. After that, it stays at 0.
